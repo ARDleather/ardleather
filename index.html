@@ -105,11 +105,11 @@
     }
 
     .product .price {
-  margin-top: 10px;
-  font-size: 14px;   /* Price size 14px */
-  font-weight: bold; /* Bold price */
-  color: #111;
-}
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #111;
+    }
 
     .product button {
       margin-top: 12px;
@@ -124,6 +124,17 @@
 
     .product button:hover {
       background: #1ebc5b;
+    }
+
+    /* ===== new CSS for center + out of stock ===== */
+    #home {
+      text-align: center;
+    }
+
+    .stock {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #ff0000;
     }
 
     .footer {
@@ -222,20 +233,21 @@
       <h2>Wallets</h2>
       <div class="products">
         <div class="product">
-  <img src="https://via.placeholder.com/400x200.png?text=ARD+Leather+Wallet" alt="Wallet">
-  <h3>Premium Wallet</h3>
-  <p>Elegant wallet with multiple card slots.</p>
-  <div class="price">Rs. 1,299</div>
-  <div class="stock">Out of Stock</div>
-  <button disabled>Order Now</button>
-</div>
+          <img src="https://via.placeholder.com/400x200.png?text=ARD+Leather+Wallet" alt="Wallet">
+          <h3>Premium Wallet</h3>
+          <p>Elegant wallet with multiple card slots.</p>
+          <div class="price">Rs. 1,299</div>
+          <div class="stock">Out of Stock</div>
+          <button disabled>Order Now</button>
+        </div>
 
         <div class="product">
           <img src="https://via.placeholder.com/400x200.png?text=Slim+Wallet" alt="Slim Wallet">
           <h3>Slim Wallet</h3>
           <p>Lightweight and easy to carry.</p>
           <div class="price">Rs. 1,599</div>
-          <button onclick="order('Slim Wallet')">Order Now</button>
+          <div class="stock">Out of Stock</div>
+          <button disabled>Order Now</button>
         </div>
 
         <div class="product">
@@ -243,7 +255,8 @@
           <h3>Card Holder</h3>
           <p>Perfect for cards and IDs.</p>
           <div class="price">Rs. 1,499</div>
-          <button onclick="order('Card Holder')">Order Now</button>
+          <div class="stock">Out of Stock</div>
+          <button disabled>Order Now</button>
         </div>
       </div>
     </section>
@@ -257,7 +270,8 @@
           <h3>Keychain</h3>
           <p>Stylish leather keychain.</p>
           <div class="price">Rs. 499</div>
-          <button onclick="order('Keychain')">Order Now</button>
+          <div class="stock">Out of Stock</div>
+          <button disabled>Order Now</button>
         </div>
 
         <div class="product">
@@ -265,7 +279,8 @@
           <h3>Leather Strap</h3>
           <p>Perfect for bags and accessories.</p>
           <div class="price">Rs. 799</div>
-          <button onclick="order('Leather Strap')">Order Now</button>
+          <div class="stock">Out of Stock</div>
+          <button disabled>Order Now</button>
         </div>
 
         <div class="product">
@@ -273,7 +288,8 @@
           <h3>Wallet Chain</h3>
           <p>Stylish chain for wallet.</p>
           <div class="price">Rs. 699</div>
-          <button onclick="order('Wallet Chain')">Order Now</button>
+          <div class="stock">Out of Stock</div>
+          <button disabled>Order Now</button>
         </div>
       </div>
     </section>
@@ -306,7 +322,3 @@
   </script>
 </body>
 </html>
-
-
-
-
