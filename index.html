@@ -3,115 +3,304 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARD Leather</title>
+  <title>ARD Leather - Premium Leather Products</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #333; color: #fff; text-align: center; padding: 20px; }
-    nav { background: #555; padding: 10px; text-align: center; }
-    nav button { margin: 0 10px; padding: 10px 15px; color: white; background: #777; border: none; cursor: pointer; }
-    section { padding: 20px; max-width: 900px; margin: auto; }
-    .product { border: 1px solid #ddd; padding: 10px; margin: 10px 0; background: #fff; }
-    footer { background: #111; color: #fff; text-align: center; padding: 15px; }
-    .hidden { display: none; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    nav {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      font-size: 26px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 12px 0 0;
+      font-size: 18px;
+    }
+
+    .product p {
+      margin: 8px 0 0;
+      color: #555;
+    }
+
+    .product .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .product button {
+      margin-top: 12px;
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .product button:hover {
+      background: #1ebc5b;
+    }
+
+    .footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 30px;
+      border-top: 2px solid #333;
+    }
+
+    .footer h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    .footer .whatsapp {
+      margin-top: 10px;
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>ARD Leather</h1>
-    <p>Premium Belts & Wallets</p>
+    <p>Premium Leather Products | Belts | Wallets | Accessories</p>
   </header>
 
   <nav>
-    <button onclick="showSection('home')">Home</button>
-    <button onclick="showSection('belts')">Premium Belts</button>
-    <button onclick="showSection('wallets')">Premium Wallets</button>
+    <a href="#home">Home</a>
+    <a href="#belts">Belts</a>
+    <a href="#wallets">Wallets</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>Choose a category to see products.</p>
-  </section>
+  <div class="container">
+    <section id="home" class="section">
+      <h2>Welcome to ARD Leather</h2>
+      <p>High quality leather products with perfect finishing and stylish design.</p>
+    </section>
 
-  <section id="belts" class="hidden">
-    <h2>Premium Belts</h2>
+    <!-- Belts Section -->
+    <section id="belts" class="section">
+      <h2>Belts</h2>
+      <div class="products">
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=ARD+Leather+Belt" alt="Classic Belt">
+          <h3>Classic Belt</h3>
+          <p>High quality leather belt for everyday use.</p>
+          <div class="price">Rs. 2,999</div>
+          <button onclick="order('Classic Belt')">Order Now</button>
+        </div>
 
-    <div class="product">
-      <h3>Classic Leather Belt</h3>
-      <button onclick="order('Classic Leather Belt')">Order Now</button>
-    </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Black+Leather+Belt" alt="Black Belt">
+          <h3>Black Belt</h3>
+          <p>Stylish black belt for formal wear.</p>
+          <div class="price">Rs. 3,499</div>
+          <button onclick="order('Black Belt')">Order Now</button>
+        </div>
 
-    <div class="product">
-      <h3>Sporty Belt</h3>
-      <button onclick="order('Sporty Belt')">Order Now</button>
-    </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Brown+Leather+Belt" alt="Brown Belt">
+          <h3>Brown Belt</h3>
+          <p>Perfect for casual and formal outfits.</p>
+          <div class="price">Rs. 3,199</div>
+          <button onclick="order('Brown Belt')">Order Now</button>
+        </div>
+      </div>
+    </section>
 
-    <div class="product">
-      <h3>Designer Buckle Belt</h3>
-      <button onclick="order('Designer Buckle Belt')">Order Now</button>
-    </div>
+    <!-- Wallets Section -->
+    <section id="wallets" class="section">
+      <h2>Wallets</h2>
+      <div class="products">
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=ARD+Leather+Wallet" alt="Wallet">
+          <h3>Premium Wallet</h3>
+          <p>Elegant wallet with multiple card slots.</p>
+          <div class="price">Rs. 2,499</div>
+          <button onclick="order('Premium Wallet')">Order Now</button>
+        </div>
 
-    <div class="product">
-      <h3>Formal Leather Belt</h3>
-      <button onclick="order('Formal Leather Belt')">Order Now</button>
-    </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Slim+Wallet" alt="Slim Wallet">
+          <h3>Slim Wallet</h3>
+          <p>Lightweight and easy to carry.</p>
+          <div class="price">Rs. 1,999</div>
+          <button onclick="order('Slim Wallet')">Order Now</button>
+        </div>
 
-    <div class="product">
-      <h3>Rugged Outdoor Belt</h3>
-      <button onclick="order('Rugged Outdoor Belt')">Order Now</button>
-    </div>
-  </section>
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Card+Holder" alt="Card Holder">
+          <h3>Card Holder</h3>
+          <p>Perfect for cards and IDs.</p>
+          <div class="price">Rs. 1,299</div>
+          <button onclick="order('Card Holder')">Order Now</button>
+        </div>
+      </div>
+    </section>
 
-  <section id="wallets" class="hidden">
-    <h2>Premium Wallets</h2>
+    <!-- Accessories Section -->
+    <section id="accessories" class="section">
+      <h2>Accessories</h2>
+      <div class="products">
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Keychain" alt="Keychain">
+          <h3>Keychain</h3>
+          <p>Stylish leather keychain.</p>
+          <div class="price">Rs. 499</div>
+          <button onclick="order('Keychain')">Order Now</button>
+        </div>
 
-    <div class="product">
-      <h3>Leather Wallet</h3>
-      <button onclick="order('Leather Wallet')">Order Now</button>
-    </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Leather+Strap" alt="Leather Strap">
+          <h3>Leather Strap</h3>
+          <p>Perfect for bags and accessories.</p>
+          <div class="price">Rs. 799</div>
+          <button onclick="order('Leather Strap')">Order Now</button>
+        </div>
 
-    <div class="product">
-      <h3>RFID Wallet</h3>
-      <button onclick="order('RFID Wallet')">Order Now</button>
-    </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/400x200.png?text=Wallet+Chain" alt="Wallet Chain">
+          <h3>Wallet Chain</h3>
+          <p>Stylish chain for wallet.</p>
+          <div class="price">Rs. 699</div>
+          <button onclick="order('Wallet Chain')">Order Now</button>
+        </div>
+      </div>
+    </section>
 
-    <div class="product">
-      <h3>Minimalist Wallet</h3>
-      <button onclick="order('Minimalist Wallet')">Order Now</button>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <p>Email: faiz.ahmed13025@gmail.com</p>
+      <p>Phone: +92 314 2118005</p>
+    </section>
+  </div>
 
-    <div class="product">
-      <h3>Trifold Wallet</h3>
-      <button onclick="order('Trifold Wallet')">Order Now</button>
-    </div>
-
-    <div class="product">
-      <h3>Money Clip Wallet</h3>
-      <button onclick="order('Money Clip Wallet')">Order Now</button>
-    </div>
-  </section>
-
-  <footer>
-    <p>Contact: 03142118005</p>
-  </footer>
+  <div class="footer">
+    <h3>Contact Us</h3>
+    <p>Email: faiz.ahmed13025@gmail.com</p>
+    <p>Phone: +92 314 2118005</p>
+    <p>&copy; 2026 ARD Leather. All rights reserved.</p>
+    <a class="whatsapp" href="https://wa.me/923142118005" target="_blank">
+      Order on WhatsApp
+    </a>
+  </div>
 
   <script>
-    const phone = "923142118005"; // WhatsApp number
-
-    function showSection(sectionId) {
-      document.getElementById('home').classList.add('hidden');
-      document.getElementById('belts').classList.add('hidden');
-      document.getElementById('wallets').classList.add('hidden');
-      document.getElementById(sectionId).classList.remove('hidden');
-    }
+    const phone = "923142118005"; // your WhatsApp number
 
     function order(product) {
-      const message = encodeURIComponent(
-        "Hello, I want to order: " + product + ". Payment method: COD (Cash on Delivery)"
-      );
+      const message = encodeURIComponent("Hello, I want to order: " + product);
       window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
     }
   </script>
-
 </body>
 </html>
