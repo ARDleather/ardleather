@@ -114,23 +114,19 @@
       color: #111;
     }
 
-    .cta {
-      text-align: center;
-      margin-top: 25px;
-    }
-
-    .cta button {
-      background: #111;
+    .product button {
+      margin-top: 12px;
+      background: #25d366;
       color: #fff;
-      padding: 12px 20px;
       border: none;
+      padding: 10px 15px;
       border-radius: 8px;
-      font-size: 16px;
       cursor: pointer;
+      font-weight: bold;
     }
 
-    .cta button:hover {
-      background: #333;
+    .product button:hover {
+      background: #1ebc5b;
     }
 
     .contact {
@@ -210,18 +206,23 @@
           <h3>Classic Leather Belt</h3>
           <p>High quality leather belt for everyday use.</p>
           <div class="price">Rs. 2,999</div>
+          <button onclick="order('Classic Leather Belt')">Order Now</button>
         </div>
+
         <div class="product">
           <img src="https://via.placeholder.com/400x200.png?text=Premium+Wallet" alt="Premium Wallet">
           <h3>Premium Wallet</h3>
           <p>Elegant wallet with multiple card slots.</p>
           <div class="price">Rs. 2,499</div>
+          <button onclick="order('Premium Wallet')">Order Now</button>
         </div>
+
         <div class="product">
           <img src="https://via.placeholder.com/400x200.png?text=Leather+Accessories" alt="Leather Accessories">
           <h3>Leather Accessories</h3>
           <p>Keychains, straps, and more.</p>
           <div class="price">Rs. 999</div>
+          <button onclick="order('Leather Accessories')">Order Now</button>
         </div>
       </div>
     </section>
@@ -229,7 +230,7 @@
     <section id="contact" class="contact">
       <h2>Contact Us</h2>
       <p>Email: faiz.ahmed13025@gmail.com</p>
-      <p>Phone: +92 300 0212487</p>
+      <p>Phone: +92 314 2118005</p>
       <p>Address: Sheikhupura, Pakistan</p>
     </section>
   </div>
@@ -242,8 +243,15 @@
   </div>
 
   <script>
+    const phone = "923142118005"; // your WhatsApp number (without +)
+
     function openWhatsApp() {
-      window.open("https://wa.me/923000212487", "_blank");
+      window.open("https://wa.me/" + phone, "_blank");
+    }
+
+    function order(product) {
+      const message = encodeURIComponent("Hello, I want to order: " + product);
+      window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
     }
   </script>
 </body>
