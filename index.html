@@ -126,17 +126,6 @@
       background: #1ebc5b;
     }
 
-    /* ===== new CSS for center + out of stock ===== */
-    #home {
-      text-align: center;
-    }
-
-    .stock {
-      margin-top: 8px;
-      font-weight: bold;
-      color: #ff0000;
-    }
-
     .footer {
       background: #111;
       color: #fff;
@@ -203,7 +192,7 @@
       <h2>Belts</h2>
       <div class="products">
         <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=ARD+Leather+Belt" alt="Classic Belt">
+          <img src="images/belt1.png" alt="Classic Belt">
           <h3>Classic Belt</h3>
           <p>High quality leather belt for everyday use.</p>
           <div class="price">Rs. 1,299</div>
@@ -211,7 +200,7 @@
         </div>
 
         <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Black+Leather+Belt" alt="Black Belt">
+          <img src="images/belt2.png" alt="Black Belt">
           <h3>Black Belt</h3>
           <p>Stylish black belt for formal wear.</p>
           <div class="price">Rs. 1,299</div>
@@ -219,7 +208,7 @@
         </div>
 
         <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Brown+Leather+Belt" alt="Brown Belt">
+          <img src="images/belt3.png" alt="Brown Belt">
           <h3>Brown Belt</h3>
           <p>Perfect for casual and formal outfits.</p>
           <div class="price">Rs. 1,299</div>
@@ -237,8 +226,8 @@
           <h3>Premium Wallet</h3>
           <p>Elegant wallet with multiple card slots.</p>
           <div class="price">Rs. 1,299</div>
-          <div class="stock">Out of Stock</div>
-          <button disabled>Order Now</button>
+          <div class="stock"><b>Out of Stock</b></div>
+          <button disabled><b>Order Now</b></button>
         </div>
 
         <div class="product">
@@ -246,8 +235,8 @@
           <h3>Slim Wallet</h3>
           <p>Lightweight and easy to carry.</p>
           <div class="price">Rs. 1,599</div>
-          <div class="stock">Out of Stock</div>
-          <button disabled>Order Now</button>
+          <div class="stock"><b>Out of Stock</b></div>
+          <button disabled><b>Order Now</b></button>
         </div>
 
         <div class="product">
@@ -255,8 +244,8 @@
           <h3>Card Holder</h3>
           <p>Perfect for cards and IDs.</p>
           <div class="price">Rs. 1,499</div>
-          <div class="stock">Out of Stock</div>
-          <button disabled>Order Now</button>
+          <div class="stock"><b>Out of Stock</b></div>
+          <button disabled><b>Order Now</b></button>
         </div>
       </div>
     </section>
@@ -270,8 +259,8 @@
           <h3>Keychain</h3>
           <p>Stylish leather keychain.</p>
           <div class="price">Rs. 499</div>
-          <div class="stock">Out of Stock</div>
-          <button disabled>Order Now</button>
+          <div class="stock"><b>Out of Stock</b></div>
+          <button disabled><b>Order Now</b></button>
         </div>
 
         <div class="product">
@@ -279,8 +268,8 @@
           <h3>Leather Strap</h3>
           <p>Perfect for bags and accessories.</p>
           <div class="price">Rs. 799</div>
-          <div class="stock">Out of Stock</div>
-          <button disabled>Order Now</button>
+          <div class="stock"><b>Out of Stock</b></div>
+          <button disabled><b>Order Now</b></button>
         </div>
 
         <div class="product">
@@ -288,8 +277,8 @@
           <h3>Wallet Chain</h3>
           <p>Stylish chain for wallet.</p>
           <div class="price">Rs. 699</div>
-          <div class="stock">Out of Stock</div>
-          <button disabled>Order Now</button>
+          <div class="stock"><b>Out of Stock</b></div>
+          <button disabled><b>Order Now</b></button>
         </div>
       </div>
     </section>
@@ -313,7 +302,7 @@
   </div>
 
   <script>
-    const phone = "923142118005"; // your WhatsApp number
+    const phone = "923142118005";
 
     function order(product) {
       const message = encodeURIComponent("Hello, I want to order: " + product);
