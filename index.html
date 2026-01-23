@@ -70,6 +70,7 @@
     .section h2 {
       margin-top: 0;
       font-size: 26px;
+      text-align: center;
     }
 
     .products {
@@ -170,144 +171,51 @@
 
   <header>
     <h1>ARD Leather</h1>
-    <p>Premium Leather Products | Belts | Wallets | Accessories</p>
+    <p>Premium Leather Products | Belts</p>
   </header>
 
   <nav>
-    <a href="#home">Home</a>
     <a href="#belts">Belts</a>
-    <a href="#wallets">Wallets</a>
-    <a href="#accessories">Accessories</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
-    <section id="home" class="section">
-      <h2>Welcome to ARD Leather</h2>
-      <p>High quality leather products with perfect finishing and stylish design.</p>
-    </section>
-
-    <!-- Belts Section -->
     <section id="belts" class="section">
       <h2>Belts</h2>
       <div class="products">
         <div class="product">
-          <img src="images/belt1.png" alt="Classic Belt">
-          <h3>Classic Belt</h3>
-          <p>High quality leather belt for everyday use.</p>
+          <img src="images/belt1.png" alt="Belt 1">
+          <h3>Belt 1</h3>
+          <p>High quality leather belt.</p>
           <div class="price">Rs. 1,299</div>
-          <button onclick="order('Classic Belt')">Order Now</button>
         </div>
 
         <div class="product">
-          <img src="images/belt2.png" alt="Black Belt">
-          <h3>Black Belt</h3>
-          <p>Stylish black belt for formal wear.</p>
+          <img src="images/belt2.png" alt="Belt 2">
+          <h3>Belt 2</h3>
+          <p>Stylish leather belt.</p>
           <div class="price">Rs. 1,299</div>
-          <button onclick="order('Black Belt')">Order Now</button>
         </div>
 
         <div class="product">
-          <img src="images/belt3.png" alt="Brown Belt">
-          <h3>Brown Belt</h3>
-          <p>Perfect for casual and formal outfits.</p>
+          <img src="images/belt3.png" alt="Belt 3">
+          <h3>Belt 3</h3>
+          <p>Premium leather belt.</p>
           <div class="price">Rs. 1,299</div>
-          <button onclick="order('Brown Belt')">Order Now</button>
         </div>
       </div>
     </section>
 
-    <!-- Wallets Section -->
-    <section id="wallets" class="section">
-      <h2>Wallets</h2>
-      <div class="products">
-        <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=ARD+Leather+Wallet" alt="Wallet">
-          <h3>Premium Wallet</h3>
-          <p>Elegant wallet with multiple card slots.</p>
-          <div class="price">Rs. 1,299</div>
-          <div class="stock"><b>Out of Stock</b></div>
-          <button disabled><b>Order Now</b></button>
-        </div>
-
-        <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Slim+Wallet" alt="Slim Wallet">
-          <h3>Slim Wallet</h3>
-          <p>Lightweight and easy to carry.</p>
-          <div class="price">Rs. 1,599</div>
-          <div class="stock"><b>Out of Stock</b></div>
-          <button disabled><b>Order Now</b></button>
-        </div>
-
-        <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Card+Holder" alt="Card Holder">
-          <h3>Card Holder</h3>
-          <p>Perfect for cards and IDs.</p>
-          <div class="price">Rs. 1,499</div>
-          <div class="stock"><b>Out of Stock</b></div>
-          <button disabled><b>Order Now</b></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Accessories Section -->
-    <section id="accessories" class="section">
-      <h2>Accessories</h2>
-      <div class="products">
-        <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Keychain" alt="Keychain">
-          <h3>Keychain</h3>
-          <p>Stylish leather keychain.</p>
-          <div class="price">Rs. 499</div>
-          <div class="stock"><b>Out of Stock</b></div>
-          <button disabled><b>Order Now</b></button>
-        </div>
-
-        <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Leather+Strap" alt="Leather Strap">
-          <h3>Leather Strap</h3>
-          <p>Perfect for bags and accessories.</p>
-          <div class="price">Rs. 799</div>
-          <div class="stock"><b>Out of Stock</b></div>
-          <button disabled><b>Order Now</b></button>
-        </div>
-
-        <div class="product">
-          <img src="https://via.placeholder.com/400x200.png?text=Wallet+Chain" alt="Wallet Chain">
-          <h3>Wallet Chain</h3>
-          <p>Stylish chain for wallet.</p>
-          <div class="price">Rs. 699</div>
-          <div class="stock"><b>Out of Stock</b></div>
-          <button disabled><b>Order Now</b></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="section">
       <h2>Contact Us</h2>
-      <p>Email: faiz.ahmed13025@gmail.com</p>
-      <p>Phone: +92 314 2118005</p>
+      <p>WhatsApp: +92 314 2118005</p>
     </section>
   </div>
 
   <div class="footer">
-    <h3>Contact Us</h3>
-    <p>Email: faiz.ahmed13025@gmail.com</p>
-    <p>Phone: +92 314 2118005</p>
-    <p>&copy; 2026 ARD Leather. All rights reserved.</p>
-    <a class="whatsapp" href="https://wa.me/923142118005" target="_blank">
-      Order on WhatsApp
-    </a>
+    <h3>ARD Leather</h3>
+    <p>Contact: +92 314 2118005</p>
   </div>
 
-  <script>
-    const phone = "923142118005";
-
-    function order(product) {
-      const message = encodeURIComponent("Hello, I want to order: " + product);
-      window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
-    }
-  </script>
 </body>
 </html>
